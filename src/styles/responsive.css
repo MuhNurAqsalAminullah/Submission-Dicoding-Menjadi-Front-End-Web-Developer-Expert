@@ -1,0 +1,164 @@
+.post {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 574px) {
+    .header_menu {
+        display: flex;
+        font-size: 35px;
+        color: #fff;
+        /* display: inline-block; */
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+    }
+
+    .header a:focus {
+        outline: 4px dashed white;
+    }
+
+    .nav_list {
+        position: absolute;
+        flex-direction: column;
+        width: 50%;
+        left: 0;
+        top: 80px;
+        z-index: 10;
+        background-color: skyblue;
+        
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav_item {
+        display: list-item;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 20px 0;
+    }
+
+    .post_title a {
+        font-size: 22px;
+    }
+
+    .post_reting {
+        font-size: 12px;
+    }
+
+    .post-item_description {
+        font-size: 12px;
+    }
+
+    .detailCard {
+        grid-template-columns: 1fr;
+    }
+
+    .food {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    .header_menu {
+        display: none;
+    }
+
+    .post_reting {
+        font-size: 14px;
+    }
+
+    .post_title a {
+        font-size: 22px;
+    }
+
+    .post-item_description {
+        font-size: 14px;
+    }
+
+    .detailCard {
+        grid-template-columns: 1fr;
+    }
+
+    .food {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}
+
+@media screen and (min-width: 600px) {
+    .post_reting {
+        font-size: 14px;
+    }
+
+    .post_title a {
+        font-size: 24px;
+    }
+
+    .post-item_description {
+        font-size: 14px;
+    }
+}
+
+/* Ukuran Tablet */
+@media screen and (min-width: 700px) {
+    .post {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    .post_title a {
+        font-size: 24px;
+    }
+
+    .food {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .review {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}
+
+/* Ukuran Dekstop */
+@media screen and (min-width: 1200px) {
+    .post {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+
+    .post_title a {
+        font-size: 28px;
+    }
+
+    .detailCard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 16px;
+        padding: 5px;
+    }
+
+    .review {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
